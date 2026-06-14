@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hanken Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Neo-Brutalist Colors */
+  --color-brand-yellow: #ffe600;
+  --color-brand-purple: #8f4fed;
+  --color-brand-purple-dark: #7531d3;
+  --color-brand-green: #46eb74;
+  --color-brand-green-dark: #006e27;
+  --color-brand-coral: #ff6b6b;
+  --color-brand-coral-dark: #ba1a1a;
+  
+  --color-bg-light: #f9f9f9;
+  --color-bg-dim: #dadada;
+  --color-bg-container-low: #f3f3f3;
+  --color-bg-container-lowest: #ffffff;
+}
+
+@layer utilities {
+  /* Neo-brutalist helper classes */
+  .neo-border {
+    border: 3px solid #000000;
+  }
+  .neo-border-sm {
+    border: 2px solid #000000;
+  }
+  .neo-shadow {
+    box-shadow: 6px 6px 0px 0px #000000;
+  }
+  .neo-shadow-sm {
+    box-shadow: 3px 3px 0px 0px #000000;
+  }
+  .neo-shadow-lg {
+    box-shadow: 8px 8px 0px 0px #000000;
+  }
+  .neo-transition {
+    transition: all 0.1s ease;
+  }
+  .neo-active:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #000000;
+  }
+  .neo-active-lg:active {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0px 0px #000000;
+  }
+}
+
+/* Custom scrollbars for a premium feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-left: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border: 2px solid #ffffff;
+}
+
