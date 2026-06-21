@@ -13,11 +13,27 @@
   --color-brand-green-dark: #006e27;
   --color-brand-coral: #ff6b6b;
   --color-brand-coral-dark: #ba1a1a;
+  --color-brand-blue: #7DFAFF;
   
   --color-bg-light: #f9f9f9;
   --color-bg-dim: #dadada;
   --color-bg-container-low: #f3f3f3;
   --color-bg-container-lowest: #ffffff;
+
+  --keyframes-shake: {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+  };
+  
+  --keyframes-fade-in: {
+    0% { opacity: 0; transform: translateY(-2px); }
+    100% { opacity: 1; transform: translateY(0); }
+  };
+
+  /* Menghubungkan ke Utility Class Animasi Tailwind */
+  --animate-shake: shake 0.2s ease-in-out 2;
+  --animate-fade-in: fadeIn 0.15s ease-out forwards;
 }
 
 @layer utilities {

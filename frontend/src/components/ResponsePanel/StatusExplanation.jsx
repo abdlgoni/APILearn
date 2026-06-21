@@ -5,7 +5,7 @@ export default function StatusExplanation({ title, body, isSuccess }) {
       className={`neo-border-sm neo-shadow-sm p-4 mb-6 ${
         isSuccess
           ? "bg-brand-yellow text-black"
-          : "bg-brand-coral/20 text-black"
+          : "bg-red-400 text-black"
       }`}
     >
       <div className="flex items-start gap-3">
