@@ -10,6 +10,7 @@ export default function useApiRequest() {
   ]);
   const [reqBody, setReqBody] = useState("");
   const [authToken, setAuthToken] = useState("");
+  const [urlError, setUrlError] = useState("");
   const [isSending, setIsSending] = useState(false);
   const [response, setResponse] = useState(null);
 
@@ -33,8 +34,18 @@ export default function useApiRequest() {
 
   // --- Request sender ---
   const sendRequest = async () => {
-    if (!url || url.trim() === "") return;
+    if (!url || url.trim() === "") {
+      setUrlError("URL tidak boleh kosong");
+      return;
+    }
 
+    const urlPattern = /^https?:\/\//i;
+    if (!urlPattern.test(url.trim())) {
+      setUrlError("Format URL tidak valid. Gunakan http:// atau https://");
+      return;
+    }
+
+    setUrlError("");
     setIsSending(true);
     setResponse(null);
 
@@ -173,6 +184,8 @@ export default function useApiRequest() {
     authToken,
     setAuthToken,
     isSending,
+    urlError,
+    setUrlError,
     response,
     addHeader,
     updateHeader,

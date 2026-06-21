@@ -18,7 +18,7 @@ export default function HeadersInput({
 
       <div className="space-y-3 max-h-[220px] overflow-y-auto pr-1">
         {headers.length === 0 ? (
-          <div className="neo-border-sm border-dashed p-4 text-center text-xs font-bold italic text-gray-500 bg-gray-50/50">
+          <div className="neo-border-sm neo-shadow-sm border-dashed p-4 text-center text-xs font-bold italic text-gray-500 bg-gray-50/50">
             Belum ada header yang ditambahkan. Klik tombol di bawah untuk
             menambah.
           </div>

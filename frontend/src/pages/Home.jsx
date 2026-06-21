@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, Lightbulb } from "lucide-react";
+import { AlertCircle, Send } from "lucide-react";
 import useApiRequest from "../hooks/useApiRequest";
 import MethodDropdown from "../components/RequestPanel/MethodDropdown";
 import UrlInput from "../components/RequestPanel/UrlInput";
@@ -26,6 +26,8 @@ export default function Home() {
     authToken,
     setAuthToken,
     isSending,
+    urlError,
+    setUrlError,
     response,
     addHeader,
     updateHeader,
@@ -49,9 +51,16 @@ export default function Home() {
         </div>
 
         {/* URL BAR AREA */}
-        <div className="flex gap-2 mb-6">
+        <div className="flex gap-2 items-start mb-6">
           <MethodDropdown value={method} onChange={setMethod} />
-          <UrlInput value={url} onChange={setUrl} />
+          <UrlInput
+            value={url}
+            onChange={(val) => {
+              setUrl(val);
+              setUrlError("");
+            }}
+            error={urlError}
+          />
         </div>
 
         {/* TABS HEADER, BODY, AUTH */}
@@ -146,10 +155,10 @@ export default function Home() {
                 statusText={response.status}
                 isSuccess={response.isSuccess}
               />
-              <div className="flex items-center px-4 py-1.5 neo-border-sm neo-shadow-sm bg-white font-black text-xs text-black">
+              <div className="flex items-center px-4 py-1.5 neo-border-sm neo-shadow-sm bg-brand-blue font-black text-xs text-black">
                 {response.time}
               </div>
-              <div className="hidden sm:flex items-center px-4 py-1.5 neo-border-sm neo-shadow-sm bg-white font-black text-xs text-black">
+              <div className="hidden sm:flex items-center px-4 py-1.5 neo-border-sm neo-shadow-sm bg-brand-purple font-black text-xs text-black">
                 {response.size}
               </div>
             </div>
