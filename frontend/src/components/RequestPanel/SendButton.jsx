@@ -13,7 +13,7 @@ export default function SendButton({
       onClick={onClick}
       disabled={isLoading}
       type="button"
-      className={`w-full neo-border neo-shadow py-4 flex items-center justify-center gap-3 font-black text-lg uppercase tracking-wider neo-transition neo-active cursor-pointer ${
+      className={`w-full neo-border neo-shadow py-4 flex items-center justify-center gap-3 font-black text-lg uppercase tracking-wider neo-transition neo-hover cursor-pointer ${
         isPurple
           ? "bg-brand-purple hover:bg-brand-purple-dark text-white"
           : "bg-brand-yellow hover:bg-brand-yellow/90 text-black"
