@@ -54,7 +54,7 @@ export default function HeadersInput({
       <button
         type="button"
         onClick={onAddHeader}
-        className="neo-border-sm neo-shadow-sm neo-transition neo-active bg-white hover:bg-gray-100 py-2 text-xs font-black uppercase flex items-center justify-center gap-2 cursor-pointer mt-1"
+        className="neo-border-sm neo-shadow-sm neo-transition neo-hover bg-white hover:bg-gray-100 py-2 text-xs font-black uppercase flex items-center justify-center gap-2 cursor-pointer mt-1"
       >
         <Plus className="w-4 h-4 text-black stroke-[3.5px]" />
         Tambah Header
