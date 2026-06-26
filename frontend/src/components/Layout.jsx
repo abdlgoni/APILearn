@@ -18,8 +18,8 @@ export default function Layout() {
               className={({ isActive }) =>
                 `text-xs md:text-sm font-black uppercase pb-1 tracking-tight transition-all cursor-pointer ${
                   isActive
-                    ? "border-b-[4px] border-brand-purple text-black"
-                    : "text-gray-500 hover:text-black hover:border-b-[4px] hover:border-gray-400"
+                    ? "border-brand-purple"
+                    : "text-gray-500 hover:text-black "
                 }`
               }
             >
@@ -30,8 +30,8 @@ export default function Layout() {
               className={({ isActive }) =>
                 `text-xs md:text-sm font-black uppercase pb-1 tracking-tight transition-all cursor-pointer ${
                   isActive
-                    ? "border-b-[4px] border-brand-purple text-black"
-                    : "text-gray-500 hover:text-black hover:border-b-[4px] hover:border-gray-400"
+                    ? "border-brand-purple"
+                    : "text-gray-500 hover:text-black "
                 }`
               }
             >

@@ -64,6 +64,10 @@
     transform: translate(3px, 3px);
     box-shadow: 3px 3px 0px 0px #000000;
   }
+  .neo-hover:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #000000;
+  }
 }
 
 /* Custom scrollbars for a premium feel */

@@ -13,7 +13,7 @@ export default function UrlInput({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
-          className={`w-full neo-border-sm neo-shadow-sm py-2.5 pl-4 pr-10 font-mono text-xs md:text-sm focus:outline-none focus:ring-0 text-black font-semibold neo-active ${
+          className={`w-full neo-border-sm neo-shadow-sm py-2.5 pl-4 pr-10 font-mono text-xs md:text-sm focus:outline-none focus:ring-0 text-black font-semibold neo-transition neo-active neo-hover ${
             error
               ? "border-red-500 bg-red-50 focus:bg-red-50 animate-shake" 
               : "focus:bg-brand-yellow/10"
